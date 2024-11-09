@@ -1,8 +1,8 @@
 <?php
-include "include/connect.php";
+include "/connect.php";
 
 if (!isset($_SESSION['user'])) {
-    header("Location: back/user_data.php");
+    header("Location: /user_data.php");
 }
 $user = $_SESSION['user'];
 ?>

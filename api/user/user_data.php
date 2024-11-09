@@ -1,35 +1,27 @@
 <?php
 
-include "/connect.php";
+include "../../includes/connect.php";
 
 if (isset($_POST['LogIn'])) {
 
-
-    function validate($data)
-    {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
-
-    $email = validate($_POST['email']);
-    $password = validate($_POST['password']);
+    $email = $_POST['email'];
+    $password = $_POST['password'];
     // $username= $_POST['username'];
 
-    $sql = "SELECT * FROM users WHERE (email = '$email' OR username = '$email') AND password = '$password'";
+    $sql = "SELECT * FROM users WHERE email = '$email' OR username = '$username' AND password = '$password'";
     $query = $conn->query($sql);
 
     if ($query->num_rows > 0) {
         $data = $query->fetch_assoc();
-        if (($email == $data['email']) || ($email == $data['username'])  && ($password == $data['password'])) {
+        if (($email == $data['email']) || ($username == $data['username'])  && ($password == $data['password'])) {
 
             $_SESSION['user'] = $data;
-            $_SESSION['user_id'] = $data['ID']; // ID from users table
-            $_SESSION['username'] = $data['username'];
 
-            if ($_SESSION['user']['role'] == "user") {
-                header("Location: /MovieAlto.php");
+            if ($_SESSION['user']['role'] == "admin") {
+                header("Location: ../index.php");
+                exit();
+            } else if ($_SESSION['user']['role'] == "user") {
+                header("Location: ../../MovieAlto.php");
                 exit();
             } else {
                 echo "<span style='color:red'>Invalid Username or Password </span>";
@@ -37,6 +29,7 @@ if (isset($_POST['LogIn'])) {
         }
     }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,13 +38,13 @@ if (isset($_POST['LogIn'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-   <!-- <link rel="stylesheet" type="text/css" href="../front/css/bootstrap.css"> -->
+    <link rel="stylesheet" href="../../front/css/bootstrap.css">
+    <link rel="stylesheet" href="../../front/css/bootstrap.min.css">
 
 </head>
 
 <body>
-    <div class="container p-5 mt-5">
+    <div class="container p-5mt-5">
         <div class="container mt-5">
             <div class="row">
                 <div class="col-md-6 offset-md-3">
@@ -64,7 +57,7 @@ if (isset($_POST['LogIn'])) {
                         <div class="card-body">
                             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
                                 <div class="mb-3">
-                                    <label for="email" class="form-label">Email or Username</label>
+                                    <label for="email" class="form-label">Email</label>
                                     <input type="text" name="email" class="form-control" id="email" autocomplete="off">
                                 </div>
                                 <div class="mb-3">
@@ -73,8 +66,7 @@ if (isset($_POST['LogIn'])) {
                                 </div>
                                 <div class="mb-3">
                                     <input type="submit" class="btn btn-warning btn-lg btn-block" name="LogIn" class="btn btn-primary" value="Login">
-                                    <a class="btn btn-primary btn-lg btn-block " type="submit" name="Register" value="Regis" href="user_reg.php">Register </a>
-                                    <a class="btn btn-success btn-lg btn-block float-end" type="submit" name="Adlog" value="Adlog" href="admin_create.php">Admin Log In </a>
+                                    <a class="btn btn-primary btn-lg btn-block " type="submit" name="LogIn" value="LogIn" href="../user/user_reg.php">Register </a>
                                 </div>
                         </div>
                     </div>

@@ -4,14 +4,14 @@
       "runtime": "vercel-php@0.6.2"
     }
   },
- "routes": [
-    { "src": "/(.*)",  "dest": "/api/index.php" },
-    { "src": "/front/css/(.*).css", "dest": "/css/style.css" },
+ "rewrites": [
+    { "src": "/(.*)",  "dest": "/api/user_data.php" },
+    { "src": "/front/css/(.*).css", "dest": "/css/bootstrap.min.css" },
     { "src": "/front/js/(.*).js", "dest": "/js/script.js" }
   ],
   "builds": [
     {
-      "src": "connect.php",
+      "src": "/api/connect.php",
       "use": "vercel-php@0.6.2",
       "config": { "includeFiles": ["connect.php"] }
     }
