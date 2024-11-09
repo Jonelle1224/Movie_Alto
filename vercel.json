@@ -8,6 +8,13 @@
     { "src": "/(.*)",  "dest": "/api/index.php" },
     { "src": "/front/css/(.*).css", "dest": "/css/style.css" },
     { "src": "/front/js/(.*).js", "dest": "/js/script.js" }
+  ],
+  "builds": [
+    {
+      "src": "connect.php",
+      "use": "vercel-php@0.6.2",
+      "config": { "includeFiles": ["connect.php"] }
+    }
   ]
 }
  
