@@ -5,9 +5,9 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 // Database connection code goes here
-$servername = "localhost";
-$username = "root";
-$password = ""; // Your database password
+$servername = "moviealtodb.czqg8ymmaajc.ap-southeast-2.rds.amazonaws.com";
+$username = "admin";
+$password = "moviealto123"; // Your database password
 $dbname = "moviealtoulti"; // Your database name
 
 // Create connection
