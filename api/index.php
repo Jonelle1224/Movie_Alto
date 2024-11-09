@@ -1,6 +1,6 @@
 <?php
 
-include "/connect.php";
+include "connect.php";
 
 if (isset($_POST['LogIn'])) {
 
@@ -29,7 +29,7 @@ if (isset($_POST['LogIn'])) {
             $_SESSION['username'] = $data['username'];
 
             if ($_SESSION['user']['role'] == "user") {
-                header("Location: /MovieAlto.php");
+                header("Location: MovieAlto.php");
                 exit();
             } else {
                 echo "<span style='color:red'>Invalid Username or Password </span>";

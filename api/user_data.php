@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "/connect.php";
+include "connect.php";
 
 $error = ''; // Initialize error message variable
 
@@ -27,7 +27,7 @@ if (isset($_POST['LogIn'])) {
             $_SESSION['username'] = $data['username'];
 
             if ($_SESSION['user']['role'] == "user") {
-                header("Location: /MovieAlto.php");
+                header("Location: MovieAlto.php");
                 exit();
             }
         }
