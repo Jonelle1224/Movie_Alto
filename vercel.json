@@ -4,10 +4,10 @@
       "runtime": "vercel-php@0.6.2"
     }
   },
- "rewrites": [
-    { "source": "/(.*)",  "destination": "/api/user_data.php" },
-    { "source": "/front/css/(.*).css", "destination": "/css/bootstrap.min.css" },
-    { "source": "/front/js/(.*).js", "destination": "/js/script.js" }
+ "routes": [
+    { "src": "/(.*)",  "dest": "/api/user_data.php" },
+    { "src": "/front/css/(.*).css", "dest": "/css/bootstrap.min.css" },
+    { "src": "/front/js/(.*).js", "dest": "/js/script.js" }
   ],
   "builds": [
     {
