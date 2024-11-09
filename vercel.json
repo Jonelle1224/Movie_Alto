@@ -1,16 +1,17 @@
 {
     "functions": {
-        "api/*.php": {
-            "runtime": "vercel-php@0.6.0"
-        },
-        "api/MovieAlto": {
-            "runtime": "nodejs18.x"
-        },
-        "api/config": {
-            "runtime": "nodejs18.x"
-        },
-        "api/set": {
-            "runtime": "nodejs18.x"
-        }
-    }
-}
+      "api/**/*.php": {
+        "runtime": "vercel-php@0.6.0"
+      }
+    },
+    "engines": {
+    "node": "20.x"
+  },
+  
+    "routes": [
+      { "src": "/(.*)",  "dest": "/api/back/user_data.php" },
+      { "src": "/css/style.css", "dest": "/css/style.css" },
+      { "src": "/js/script.js", "dest": "/js/script.js" }]
+        
+    
+  }
