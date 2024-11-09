@@ -5,21 +5,8 @@
     }
   },
  "routes": [
-    { "src": "/add_watchlist", "dest": "/front/add_watchlist.php" },
-    { "src": "/browse_movies", "dest": "/front/browse_movies.php" },
-    { "src": "/edit_profile", "dest": "/front/edit_profile.php" },
-    { "src": "/fetch_results", "dest": "/front/fetch_results.php" },
-    { "src": "/index", "dest": "/front/index.php" },
-    { "src": "/movie_details", "dest": "/front/movie_details.php" },
-    { "src": "/movie_profile", "dest": "/front/movie_profile.php" },
-    { "src": "/movie_year", "dest": "/front/movie_year.php" },
-    { "src": "/recommendation", "dest": "/front/recommendation.php" },
-    { "src": "/search", "dest": "/front/search.php" },
-    { "src": "/submit_review", "dest": "/front/submit_review.php" },
-    { "src": "/user", "dest": "/front/user.php" },
-    { "src": "/user_review", "dest": "/front/user_review.php" },
-    { "src": "/watchlist", "dest": "/front/watchlist.php" },
-    { "src": "/(.*)", "dest": "/front/index.php" }  
+    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/(.*)", "dest": "/api/$1" }
   ]
 }
  
