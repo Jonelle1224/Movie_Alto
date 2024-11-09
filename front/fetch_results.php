@@ -15,9 +15,8 @@ if (!empty($genres)) {
     $sql .= " AND genre IN ($genreList)";
 }
 
-// Add year filter
 if (!empty($years)) {
-    // Escape each year for SQL injection protection
+    
     $yearList = "'" . implode("', '", array_map('real_escape_string', $years)) . "'";
     $sql .= " AND year IN ($yearList)";
 }

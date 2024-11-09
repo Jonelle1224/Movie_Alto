@@ -14,9 +14,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/MovieAlto/config.php';
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-danger sticky-top" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../MovieAlto.php">Movie Alto</a>
+            <a class="navbar-brand" href="<?= BASE_URL ?>./MovieAlto.php">Movie Alto</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -30,9 +30,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/MovieAlto/config.php';
                     <li class="nav-item">
                         <a class="nav-link active" href="<?= BASE_URL ?>front/browse_movies.php">Browse Movies</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link active" href="<?= BASE_URL ?>front/movie_year.php">Movie Year</a>
-                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="<?= BASE_URL ?>front/recommendation.php">Recommendation</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="<?= BASE_URL ?>front/about.php">About</a>
                     </li>
@@ -40,7 +40,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/MovieAlto/config.php';
                 </ul>
                 <?php ?>
                 <div class="dropdown float-end">
-                    <button class="btn btn-secondary dropdown-toggle fw-bold" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn btn-info dropdown-toggle fw-bold" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                         Welcome, <?= $user['username']; ?>
                     </button>
 

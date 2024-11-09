@@ -159,7 +159,7 @@ $user = $_SESSION['user'];
                                         <h5 class="card-title">Admin</h5>
                                         <i class="bi bi-shield-shaded text-warning" style="font-size: 30px;"></i>
                                         <?php
-                                        $sql = "SELECT COUNT(*) AS admins FROM admin";
+                                        $sql = "SELECT COUNT(*) AS admins FROM admins";
                                         $result = $conn->query($sql);
 
                                         if ($result->num_rows > 0) {

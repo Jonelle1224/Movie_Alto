@@ -143,3 +143,119 @@ Raw output: Review: I did not enjoy this movie at all. The plot was boring, and 
 Sentiment Label: negative, Compound Score: -0.6031
 
 Sentiment Label: negative, Compound Score: -0.6031
+Raw output: Review: What a Movie! amazing to watch with my family even though it has violence but fun 
+Sentiment Label: positive, Compound Score: 0.68
+
+Sentiment Label: positive, Compound Score: 0.68
+Raw output: Review: Loving this movie , hope to make more John wick movies 
+Sentiment Label: positive, Compound Score: 0.7783
+
+Sentiment Label: positive, Compound Score: 0.7783
+Raw output: Review: I dont like this movie
+Sentiment Label: neutral, Compound Score: -0.2755
+
+Sentiment Label: neutral, Compound Score: -0.2755
+Raw output: Review: This movie was absolutely fantastic! The storyline was gripping, and the acting was top-notch. Definitely a must-watch for anyone who loves thrillers!
+Sentiment Label: positive, Compound Score: 0.8996
+
+Sentiment Label: positive, Compound Score: 0.8996
+Raw output: Review: This movie is pure dog shit! should have not seen the light of day
+Sentiment Label: negative, Compound Score: -0.5983
+
+Sentiment Label: negative, Compound Score: -0.5983
+Raw output: Review: This movie is good especially the seen there are still modern day Asssassins!
+Sentiment Label: neutral, Compound Score: 0.4926
+
+Sentiment Label: neutral, Compound Score: 0.4926
+Raw output: Review: This movie is awesome especially the scene were there are still modern day Asssassins! hoping to see more of this movie
+Sentiment Label: positive, Compound Score: 0.8016
+
+Sentiment Label: positive, Compound Score: 0.8016
+Raw output: Review: Wow , great movie!
+Sentiment Label: positive, Compound Score: 0.8478
+
+Sentiment Label: positive, Compound Score: 0.8478
+Raw output: Review: Wow.
+Sentiment Label: positive, Compound Score: 0.5859
+
+Sentiment Label: positive, Compound Score: 0.5859
+Raw output: Review: wow
+Sentiment Label: positive, Compound Score: 0.5859
+
+Sentiment Label: positive, Compound Score: 0.5859
+Raw output: Review: wow
+Sentiment Label: positive, Compound Score: 0.5859
+
+Sentiment Label: positive, Compound Score: 0.5859
+Raw output: Review: What kind of movie is this? I dont get it
+Sentiment Label: neutral, Compound Score: 0.0
+
+Sentiment Label: neutral, Compound Score: 0.0
+Raw output: Review: Loved this movie hope to see deadpool again in the future!
+Sentiment Label: positive, Compound Score: 0.7959
+
+Sentiment Label: positive, Compound Score: 0.7959
+Raw output: Review: Awesome!
+Sentiment Label: positive, Compound Score: 0.6588
+
+Sentiment Label: positive, Compound Score: 0.6588
+Raw output: Review: This movie is great with depicting emotions!
+Sentiment Label: positive, Compound Score: 0.6588
+
+Sentiment Label: positive, Compound Score: 0.6588
+Raw output: Review: Hoping to see more of this movie
+Sentiment Label: neutral, Compound Score: 0.4215
+
+Sentiment Label: neutral, Compound Score: 0.4215
+Raw output: Review: Movie kind of okay to me
+Sentiment Label: neutral, Compound Score: 0.1548
+
+Sentiment Label: neutral, Compound Score: 0.1548
+Raw output: Review: Out of the 4 John Wicks this is top 2 of the greatest films made!
+Sentiment Label: positive, Compound Score: 0.7424
+
+Sentiment Label: positive, Compound Score: 0.7424
+Raw output: Review: Hoping this movie get deleted 
+Sentiment Label: neutral, Compound Score: 0.4215
+
+Sentiment Label: neutral, Compound Score: 0.4215
+Raw output: Review: This movie is Great hoping to see another one too, enjoyed watching with the family!
+Sentiment Label: positive, Compound Score: 0.8883
+
+Sentiment Label: positive, Compound Score: 0.8883
+Raw output: Review: been a batman fan since i was born , hoping to see more great movies like this
+Sentiment Label: positive, Compound Score: 0.9053
+
+Sentiment Label: positive, Compound Score: 0.9053
+Raw output: Review: Hope you guys dont miss out on this one because this movie is a masterpiece to begin , and also the sequel to this is astonishing, batman die fan #1 here!!
+Sentiment Label: positive, Compound Score: 0.7527
+
+Sentiment Label: positive, Compound Score: 0.7527
+Raw output: Review: What kind of movie is this? I dont get it
+Sentiment Label: neutral, Compound Score: 0.0
+
+Sentiment Label: neutral, Compound Score: 0.0
+Raw output: Review: Love this movie!
+Sentiment Label: positive, Compound Score: 0.6696
+
+Sentiment Label: positive, Compound Score: 0.6696
+Raw output: Review: Movie has great animations!
+Sentiment Label: positive, Compound Score: 0.6588
+
+Sentiment Label: positive, Compound Score: 0.6588
+Raw output: Review: What is this movie? it may have some good parts in but mostly all bad
+Sentiment Label: negative, Compound Score: -0.5859
+
+Sentiment Label: negative, Compound Score: -0.5859
+Raw output: Review: What is this movie? it may have some good parts in but mostly all bad
+Sentiment Label: negative, Compound Score: -0.5859
+
+Sentiment Label: negative, Compound Score: -0.5859
+Raw output: Review: Well done
+Sentiment Label: neutral, Compound Score: 0.2732
+
+Sentiment Label: neutral, Compound Score: 0.2732
+Raw output: Review: Love this movie!
+Sentiment Label: positive, Compound Score: 0.6696
+
+Sentiment Label: positive, Compound Score: 0.6696

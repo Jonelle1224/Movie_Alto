@@ -52,7 +52,7 @@ if (isset($_POST['LogIn'])) {
 </head>
 
 <body>
-    <div class="container p-5mt-5">
+    <div class="container p-5 mt-5">
         <div class="container mt-5">
             <div class="row">
                 <div class="col-md-6 offset-md-3">

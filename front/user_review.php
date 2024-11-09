@@ -1,5 +1,5 @@
 <?php
-
+// Start the session if it has not been started already
 
 
 include "../include/connect.php";
@@ -10,6 +10,7 @@ if (isset($_GET['reviewid'])) {
     die("Movie ID is not set.");
 }
 
+// Query to fetch movie details
 $movie_query = "SELECT * FROM movies WHERE ID = $movie_id";
 $movie_result = $conn->query($movie_query);
 
@@ -25,6 +26,7 @@ if ($movie_result) {
     die("Query failed: " . $conn->error);
 }
 
+// Query to fetch reviews for the movie
 $review_query = "SELECT rr.*, u.profile_image FROM review_rate rr LEFT JOIN users u ON rr.user_id = u.ID WHERE rr.movie_id = $movie_id ORDER BY rr.ID DESC";
 $reviews_result = $conn->query($review_query);
 
@@ -57,12 +59,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $check_result = $conn->query($check_query);
 
         if ($check_result->num_rows === 0) {
-           
+            // Insert new review with sentiment label and score
             $insert_query = "INSERT INTO review_rate (user_id, user_name, movie_id, reviews, ratings, sentiment_label, sentiment_score) 
                      VALUES ('$user_id', '$user_name', '$movie_id', '$review', '$rating', '$sentiment_label', '$compound_score')";
 
             if ($conn->query($insert_query) === TRUE) {
-                
+                // Redirect with success message
                 header("Location: user_review.php?reviewid=" . $movie_id . "&message=Review submitted successfully.");
                 exit();
             } else {

@@ -97,7 +97,7 @@ if (isset($_POST['LogIn'])) {
                                             <label class="form-check-label" for="showPassword">Show Password</label>
                                         </div>
                                         <!-- Forgot Password Link -->
-                                        <a href="forgot_password.php" class="forgot-password">Forgot Password?</a>
+                                        <!-- <a href="forgot_password.php" class="forgot-password">Forgot Password?</a> -->
                                     </div>
                                 </div>
 
