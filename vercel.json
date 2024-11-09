@@ -11,7 +11,7 @@
   ],
   "builds": [
     {
-      "src": "user_data.php",
+      "src": "index.php",
       "use": "vercel-php@0.6.2",
       "config": { "includeFiles": ["connect.php"] }
     }
