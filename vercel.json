@@ -8,14 +8,15 @@
     { "src": "/(.*)",  "dest": "/api/index.php" },
     { "src": "/front/css/(.*).css", "dest": "/css/bootstrap.min.css" },
     { "src": "/front/js/(.*).js", "dest": "/js/script.js" }
-  ],
+  ]
+  /*,
   "builds": [
     {
       "src": "index.php",
       "use": "vercel-php@0.6.2",
       "config": { "includeFiles": ["connect.php"] }
     }
-  ]
+  ]*/
 }
  
   
