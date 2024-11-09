@@ -1,17 +1,13 @@
 {
-    "functions": {
-      "api/**/*.php": {
-        "runtime": "vercel-php@0.6.0"
-      }
-    },
-    "engines": {
-    "node": "20.x"
+  "functions": {
+    "api/**/*.php": {
+      "runtime": "vercel-php@0.6.0"
+    }
   },
-  
-    "routes": [
-      { "src": "/(.*)",  "dest": "/api/back/user_data.php" },
-      { "src": "/css/style.css", "dest": "/css/style.css" },
-      { "src": "/js/script.js", "dest": "/js/script.js" }]
-        
-    
-  }
+  "routes": [
+    { "src": "/(.*)",  "dest": "/api/back/user_data.php" },
+    { "src": "/css/style.css", "dest": "/css/style.css" },
+    { "src": "/js/script.js", "dest": "/js/script.js" }]
+      
+}
+ 
