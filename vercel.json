@@ -5,9 +5,9 @@
     }
   },
  "rewrites": [
-    { "src": "/(.*)",  "dest": "/api/user_data.php" },
-    { "src": "/front/css/(.*).css", "dest": "/css/bootstrap.min.css" },
-    { "src": "/front/js/(.*).js", "dest": "/js/script.js" }
+    { "source": "/(.*)",  "destination": "/api/user_data.php" },
+    { "source": "/front/css/(.*).css", "destination": "/css/bootstrap.min.css" },
+    { "source": "/front/js/(.*).js", "destination": "/js/script.js" }
   ],
   "builds": [
     {
