@@ -1,6 +1,6 @@
 <?php
 
-include "../include/connect.php";
+/*include "../include/connect.php";
 
 if (isset($_POST['LogIn'])) {
 
@@ -37,7 +37,7 @@ if (isset($_POST['LogIn'])) {
         }
     }
 }
-
+*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
