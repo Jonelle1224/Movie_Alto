@@ -104,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     </div>
-    <div class="container justify-content-center mt-3">
+    <div class="container justify-content-center">
 
 <?php if (!empty($errorMessage)) { ?>
     <div class="alert alert-dismissible alert-danger" role="alert"><?= $errorMessage ?>
@@ -121,7 +121,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 <div class="mb-1">
-    <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
         Add Genre
     </button>
 
@@ -129,7 +129,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <hr>
 </div>
 
-<div class="container p-5">
+<div class="container">
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">

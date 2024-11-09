@@ -1,6 +1,7 @@
 <?php
 
 include "../include/connect.php";
+$errorMessage ='Invalid credentials. Please try again.';
 
 if (isset($_POST['adsub'])) {
 
@@ -21,7 +22,7 @@ if (isset($_POST['adsub'])) {
     $sql = "
         SELECT * FROM superadmin WHERE (username = '$username' OR email = '$username') AND password = '$password'
         UNION
-        SELECT * FROM admin WHERE (username = '$username' OR email = '$username') AND password = '$password'
+        SELECT * FROM admins WHERE (username = '$username' OR email = '$username') AND password = '$password'
     ";
     $query = $conn->query($sql);
 
@@ -45,7 +46,10 @@ if (isset($_POST['adsub'])) {
             exit();
         }
     } else {
-        echo "Incorrect username or password!";
+        echo "<div class='alert alert-warning alert-dismissible fade show' role='alert'>
+        <strong>Warning!</strong> {$errorMessage}
+        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+      </div>";
     }
 }
 ?>
@@ -63,6 +67,8 @@ if (isset($_POST['adsub'])) {
 </head>
 
 <body>
+    
+
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-6 offset-md-3">
@@ -91,5 +97,6 @@ if (isset($_POST['adsub'])) {
         </div>
     </div>
 </body>
-
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

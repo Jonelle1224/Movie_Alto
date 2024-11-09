@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "../include/connect.php";
 
 $error = ''; // Initialize error message variable
@@ -31,7 +32,6 @@ if (isset($_POST['LogIn'])) {
             }
         }
     } else {
-        // Set error message if login fails
         $error = 'Invalid Username or Password';
     }
 }
@@ -46,6 +46,22 @@ if (isset($_POST['LogIn'])) {
     <title>Portal</title>
     <link rel="stylesheet" href="../front/css/bootstrap.min.css">
     <link rel="stylesheet" href="../front/css/bootstrap.css">
+    <style>
+        .forgot-password {
+            color: #007bff; /* Blue color for Forgot Password link */
+            text-decoration: none;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .password-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -67,14 +83,24 @@ if (isset($_POST['LogIn'])) {
                             <?php endif; ?>
 
                             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email or Username</label>
-                                    <input type="text" name="email" class="form-control" id="email" autocomplete="off">
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="email" id= "floatingInput" placeholder="name@example.com" class="form-control" id="email" autocomplete="off">
+                                    <label for="floatingInput" class="form-label">Email or Username</label>
                                 </div>
-                                <div class="mb-3">
+                                <div class="form-floating mb-3">
+                                    <input type="password" name="password" id="password" placeholder="password" class="form-control" id="password">
                                     <label for="password" class="form-label">Password</label>
-                                    <input type="password" name="password" class="form-control" id="password">
+                                    <div class="password-options mt-2">
+                                        <!-- Show Password Checkbox -->
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="showPassword" onclick="togglePassword()">
+                                            <label class="form-check-label" for="showPassword">Show Password</label>
+                                        </div>
+                                        <!-- Forgot Password Link -->
+                                        <a href="forgot_password.php" class="forgot-password">Forgot Password?</a>
+                                    </div>
                                 </div>
+
                                 <div class="mb-3">
                                     <input type="submit" class="btn btn-warning btn-lg btn-block" name="LogIn" value="Login">
                                     <a class="btn btn-primary btn-lg btn-block" href="user_reg.php">Register</a>
@@ -87,6 +113,19 @@ if (isset($_POST['LogIn'])) {
             </div>
         </div>
     </div>
+
+    <!-- JavaScript for toggling password visibility -->
+    <script>
+        function togglePassword() {
+            var passwordField = document.getElementById("password");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>
