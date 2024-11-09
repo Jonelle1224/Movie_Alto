@@ -1,6 +1,6 @@
 <?php
 
-/*include "../include/connect.php";
+include "../include/connect.php";
 
 if (isset($_POST['LogIn'])) {
 
@@ -37,7 +37,6 @@ if (isset($_POST['LogIn'])) {
         }
     }
 }
-*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,8 +45,8 @@ if (isset($_POST['LogIn'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal</title>
-    <link rel="stylesheet" type="text/css" href="../front/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../front/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+   <!-- <link rel="stylesheet" type="text/css" href="../front/css/bootstrap.css"> -->
 
 </head>
 
